@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAI Bluefields</title>
+
+    <link rel="stylesheet" href="PredictCss.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- Leaflet Search -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+</head>
+
+<body>
+
+<header>
+    <h1>🌍 EcoAI Bluefields</h1>
+    <p>Monitoreo ambiental con Inteligencia Artificial</p>
+</header>
+
+<main>
+
+    <!-- MAPA -->
+    <div id="map"></div>
+
+    <!-- PANEL -->
+    <div class="panel">
+
+        <h2>📊 Datos Ambientales</h2>
+
+        <p><strong>Ubicación:</strong> <span id="location">Haz clic en el mapa</span></p>
+
+        <p>🌡 Temperatura: <span id="temp">--</span></p>
+        <p>💧 Humedad: <span id="humidity">--</span></p>
+        <p>🌬 Viento: <span id="wind">--</span></p>
+        <p>🌧 Precipitación: <span id="rain">--</span></p>
+
+        <p>🏭 AQI: <span id="aqi">--</span></p>
+        <p>☀ UV: <span id="uv">--</span></p>
+        <p>🌱 NDVI: <span id="ndvi">--</span></p>
+
+        <hr>
+
+        <!-- TURISMO -->
+        <h2>🏝 Lugares Turísticos de Nicaragua</h2>
+
+        <select id="touristSelect">
+
+            <option value="">Seleccione un lugar turístico</option>
+
+            <!-- TAXI -->
+            <option value="San Juan del Sur|Taxi|1200">San Juan del Sur</option>
+            <option value="Granada|Taxi|800">Granada</option>
+            <option value="León|Taxi|1000">León</option>
+            <option value="Volcán Masaya|Taxi|700">Volcán Masaya</option>
+            <option value="Laguna de Apoyo|Taxi|900">Laguna de Apoyo</option>
+            <option value="Cerro Negro|Taxi|1300">Cerro Negro</option>
+            <option value="Mirador de Catarina|Taxi|850">Mirador de Catarina</option>
+            <option value="Reserva Bosawás|Taxi|2500">Reserva Bosawás</option>
+
+            <!-- AVIÓN -->
+            <option value="Corn Island|Avión|3500">Corn Island</option>
+            <option value="Little Corn Island|Avión|4200">Little Corn Island</option>
+            <option value="Bluefields|Avión|2800">Bluefields</option>
+            <option value="Puerto Cabezas|Avión|3200">Puerto Cabezas</option>
+
+        </select>
+
+        <div class="tourism-info">
+
+            <p><strong>📍 Lugar:</strong> <span id="placeName">--</span></p>
+
+            <p>
+                <strong id="transportLabel">
+                    🚕 Tarifa aproximada:
+                </strong>
+
+                C$ <span id="price">--</span>
+            </p>
+
+        </div>
+
+    </div>
+</main>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Buscador -->
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+<script src="Predict.js"></script>
+
+</body>
+</html>
